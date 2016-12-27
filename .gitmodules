@@ -1,0 +1,23 @@
+[submodule "post-office.apollo"]
+	path = post-office.apollo
+	url = https://github.com/vemacs/gazelle-theme-post-office.git
+        branch = master
+[submodule "post-office.pth"]
+	path = post-office.pth
+	url = https://github.com/vemacs/gazelle-theme-post-office.git
+        branch = pth
+[submodule "passthestyles"]
+	path = passthestyles
+	url = https://github.com/passthestyles/stylesheets.git
+[submodule "Flatstyle"]
+	path = Flatstyle
+	url = https://github.com/mikmik3/mikmik3.github.io.git
+[submodule "haze_pth"]
+	path = haze_pth
+	url = https://github.com/exanurous/haze_pth.git
+[submodule "beluga"]
+	path = beluga
+	url = https://github.com/exanurous/beluga.git
+[submodule "whatnificent"]
+	path = whatnificent
+	url = https://github.com/lapigr/whatnificent

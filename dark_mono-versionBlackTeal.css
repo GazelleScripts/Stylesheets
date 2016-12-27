@@ -1,0 +1,734 @@
+/*
+DarkMono v1.5.2 What.cd Stylesheet
+Author:  Callum Jefferies (callumj) - Modified by htrd
+Contact: callum.jefferies@gmail.com - a.hatred@gmail.com
+Date:    01/23/2011 - Modified on 8/28/2012
+All images and artwork (c) 2011 htrd
+*/
+
+* { margin: 0; padding: 0; }
+body { padding: 60px 20px 30px 20px; background: #222 url("img/bg.jpg") repeat !important; font: 8pt 'Lucida Grande',Helvetica,Arial,sans-serif; color: #868686; }
+p { margin: 10px 0px; }
+p[align="center"] { margin: 0; } /* Fixes unnecessary bottom border in album artwork sidebar */
+table { border-collapse: collapse; border-spacing: 0; }
+table tr td { border-color: #3b3b3b; }
+a { text-decoration: none; color: #4A8A7F; }
+a img { border: none; }
+a:hover { color: #5fa296; }
+.new-subscriptions { font-weight: bold; padding-bottom: 3px; border-bottom: 1px solid #A33A3A; }
+h1,h2,h3 { font-family: 'Lucida Grande',Helvetica,Arial,sans-serif; font-weight: bold; color: #555 !important; }
+h2 { margin-bottom: 20px; font-size: 12pt; line-height: 16pt; }
+h3 { margin-bottom: 10px; font-size: 11pt; line-height: 14pt; }
+#logo a { background: url("https://dl.dropboxusercontent.com/s/ol0cz2nzgzjfqzh/logoteal_.png") no-repeat center center; position: absolute; top: -48px; left: 8px; width: 242px; height: 38px; }
+/*FOR TEAL COLORED LOGO REPLACE WITH THIS LINK ABOVE https://dl.dropboxusercontent.com/s/ol0cz2nzgzjfqzh/logoteal_.png
+Defaul logo is at: https://ptpimg.me/n1kc14.png*/
+#wrapper { width: 960px; margin: 0 auto; }
+#header { width: 960px; margin: 0 auto; }
+#header ul li { display: inline; margin-right: 5px; }
+#header ul li:last-child { margin-right: 0; }
+#footer { width: 960px; margin: 0 auto; margin-top: 15px; padding-top: 15px; text-align: center; border-top: 1px solid #333; color: #555; }
+
+.r00 {color: #A33A3A;}
+.r01 {color: #FF1300;}
+.r02 {color: #FF1300;}
+.r03 {color: #FF2600;}
+.r04 {color: #FF4C00;}
+.r05 {color: #FF5E00;}
+.r06 {color: #FF5E00;}
+.r07 {color: #FF7100;}
+.r08 {color: #fd4337;}
+.r09 {color: #FA0;}
+.r10 {color: #74C42E;}
+.r20 {color: #418B00;}
+.r50 {color: #418B00;}
+.r99 {color: #418B00;}
+
+.size1 { font-size: 0.75em; line-height: 12px; }
+.size2 { font-size: 1em; line-height: 14px; }
+.size3 { font-size: 1.25em; line-height: 16px; }
+.size4 { font-size: 1.5em; line-height: 18px; }
+.size5 { font-size: 1.75em; line-height: 20px; }
+.size6 { font-size: 2em; line-height: 22px; }
+.size7 { font-size: 2.25em; line-height: 26px; }
+.size8 { font-size: 2.5em; line-height: 28px; }
+.size9 { font-size: 2.75em; line-height: 30px; }
+.size10 { font-size: 3em; line-height: 34px; }
+
+#discog_table.torrent_table .colhead_dark td:nth-child(4) { width: 15%; }
+#userinfo_username {
+	position: absolute;
+	right: 0;
+	top: -120px;
+	padding: 20px 8px 10px 15px;
+	background-color: rgba(120, 40, 120, 0.2) !important;
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+    border: 1px solid rgba(118, 70, 118, 0.2);}
+#alerts {
+	position: absolute;
+	right: 15px;
+	font-size: 8pt;
+	top: 6px;
+	line-height: 14px;
+	text-align: right; }
+.alertbar { display: inline-block; margin: 0px 0px 0px 10px; }
+.alertbar a[href*="torrents.php?action=notify"]:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 12px;
+	margin: auto 5px auto auto;
+	position: relative;
+	top: 2px;
+	*top: 0px;
+	background-image: url('img/notifications.png');
+	background-repeat: no-repeat;
+	background-position: 0px -11px; }
+.alertbar a[href*="inbox.php"]:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 12px;
+	margin: auto 5px auto auto;
+	position: relative;
+	top: 2px;
+	*top: 0px;
+	background-image: url('img/notifications.png');
+	background-repeat: no-repeat;
+	background-position: 0px 1px; }
+.alertbar a[href*="index.php"]:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 12px;
+	margin: auto 5px auto auto;
+	position: relative;
+	top: 2px;
+	*top: 0px;
+	background-image: url('img/notifications.png');
+	background-repeat: no-repeat;
+	background-position: 0px -24px; }
+.alertbar a[href*="userhistory.php?action=subscribed_collages"]:before {
+	content: "";
+	display: inline-block;
+	width: 14px;
+	height: 12px;
+	margin: auto 5px auto auto;
+	position: relative;
+	top: 2px;
+	*top: 0px;
+	background-image: url('img/notifications.png');
+	background-repeat: no-repeat;
+	background-position: 0px -37px; }
+#searchbars,#userinfo_stats { margin-top: 24px; }
+#userinfo_minor { position: absolute; padding: 15px 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+#userinfo_major { position: absolute; padding: 15px 0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+#menu {
+	position: absolute;
+	text-transform: lowercase;
+	top: -15px;
+	right: 0;
+	text-align: right;
+	padding-right: 5px; }
+#userinfo_minor {
+	background-color: rgba(100, 100, 100, 0.15);
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+    border: 1px solid #333;
+	text-transform: lowercase;
+	width: auto;
+	height: 44px;
+	left: 0;
+	top: -120px;
+	padding-top: 20px;
+	text-align: center; }
+#userinfo_major {
+	text-transform: lowercase;
+	width: 200px;
+	right: 0;
+	top: -87px;
+	text-align: right; }
+#menu ul { width: 100%; }
+#userinfo_minor a { color: #777; font-size: 108%; font-weight: 600 }
+#menu a { color: #666;; font-size: 102% }
+#menu ul li { padding-right: 10px; border-right: 1px solid #3b3b3b; }
+#menu ul li:last-child { margin-right: 0; padding-right: none; border-right:  none; }
+#userinfo_minor li:nth-child(-n+6) { border: none; margin-right: 8px; }
+#nav_comments { margin-right: 10px; }
+#userinfo_minor #nav_friends { left: 600px; }
+#userinfo_major a:hover,#userinfo_minor a:hover, #menu a:hover { color: #444; }
+#userinfo_major a { font-size: 7.5pt; color: #666; }
+h1.hidden {
+	background: url("img/whatdark.png") no-repeat top left;
+	width: 940px;
+	margin: 0 auto;
+	padding: 45px 10px 8px 10px;
+	display: block;
+	text-transform: uppercase;
+	font-size: 0pt;
+	border-bottom: 1px solid #333; }
+select {
+	-webkit-appearance: menulist;
+	box-sizing: border-box;
+	-webkit-box-align: center;
+	border: 1px solid;
+	white-space: pre;
+	-webkit-rtl-ordering: logical;
+	color: #222;
+	background-color: #f9f9f9;
+	cursor: default; }
+#header { position: relative; height: 89px; margin-bottom: 10px; }
+#userinfo_stats {
+	position: relative;
+	float: right;
+	width: 217px;
+	height: 25px;
+	padding: 12px 14px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	background-color: rgba(50, 100, 100, 0.15) !important;
+	color: #696969; }
+#userinfo_stats li { display: block !important; position: absolute; width: 104px; font-size: 7.5pt; }
+#userinfo_stats span { color: #aaa !important; }
+#userinfo_stats li:nth-child(even) { border: none !important; }
+#stats_seeding, #stats_ratio { top: 10px; } /* Position of stats */
+#stats_leeching,#stats_required { top: 28px; } /* Position of stats */
+#stats_ratio,#stats_required { left: 128px; } /* Position of stats */
+#fl_tokens { left: 128px; top: 37px; } /* Position for Tokens */
+.my_reqBuffer { top: 37px; } /* Position of Buffer Calculator Script Buffer info */
+.my_demBuffer { top: 37px; } /* Position of Buffer Calculator Script Demotion info */
+#stats_buffer { top: 37px; } /* Position of Yet Another What.CD Bufferscript */
+#userinfo_stats { font-weight: bold; }
+#userinfo_stats .stat { font-weight: normal; }
+#userinfo_stats a { color: #696969; }
+#discog_table.torrent_table .colhead_dark td:first-child { width: 50px !important; }
+button,input[type="button"],input[type="submit"],#userinfo_username .brackets a {
+	cursor: pointer;
+	padding: 4px 8px;
+	font: 10pt 'Lucida Grande',Helvetica,Arial,sans-serif;
+	text-decoration: none;
+	text-transform: lowercase;
+	color: #999;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15),inset -1px 1px 0 rgba(255,255,255,0.12);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15),inset -1px 1px 0 rgba(255,255,255,0.12);
+	background: -webkit-gradient(linear,left 40%,left 120%,from(#4a4a4a),to(#3a3a3a));
+	background: -moz-linear-gradient(center bottom,#3a3a3a,#4a4a4a);
+	border: 1px solid #1d1d1d; }
+button:active,input[type="button"]:active,input[type="submit"]:active,#userinfo_username .brackets a:active { background: -webkit-gradient(linear,left 40%,left 120%,from(#3a3a3a),to(#4a4a4a)); background: -moz-linear-gradient(center bottom,#4a4a4a,#3a3a3a); }
+#userinfo_username a { font-size: 10pt; color: #999; padding-right: 8px; }
+#userinfo_username .brackets { margin: -2px; }
+#userinfo_username .brackets a { -webkit-border-top-right-radius: 0; -moz-border-radius-topright: 0; -webkit-border-bottom-right-radius: 0; -moz-border-radius-bottomright: 0; }
+#userinfo_username .brackets:last-child a {
+	border-left: none;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius-bottomleft: 0; }
+input[type="submit"]:active { -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15),inset 0 0 5px rgba(0,0,0,0.02),inset -1px 1px 0 rgba(255,255,255,0.12); -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15),inset 0 0 5px rgba(0,0,0,0.02),inset -1px 1px 0 rgba(255,255,255,0.12); }
+a,textarea,input { outline: none; }
+form textarea,form input { max-width: 80%; color: #666; }
+form#quickpostform textarea { height: 160px; margin: 0 auto; }
+div.thin br+h3 { margin: 10px 0px 10px 0px; }
+textarea,input[type="text"],input[type="email"],input[type="search"],input[type="password"],.select {
+	width: 195px;
+	padding: 6px;
+	background-color: rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border: 1px solid #333;
+	font: 9pt 'Lucida Grande',Helvetica,Arial,sans-serif;
+	color: #aaa;
+	-webkit-box-shadow: inset -1px 1px 3px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset -1px 1px 3px rgba(0,0,0,0.15);
+	-webkit-background-clip: padding-box; }
+textarea:focus,input[type="text"]:focus,input[type="password"]:focus { -webkit-box-shadow: inset -1px 1px 3px rgba(0,0,0,0.15),0 0 5px rgba(0,140,180,0.5); -moz-box-shadow: inset -1px 1px 3px rgba(0,0,0,0.15),0 0 5px rgba(0,140,180,0.5); }
+textarea { display: block; width: 550px; height: 120px; font-size: 9pt; }
+#index .sidebar a>img[width="100%"] { width: 194px; height: auto; margin: 5px 0px; border: 3px solid #3b3b3b; } /* Border for Featured Album */
+#index .sidebar a>img[width="100%"]:hover { border: 3px solid #4A8A7F; } /* Hover effect for Featured Album */
+.box.box_albumart img { width: 192px; height: auto; border: 3px solid #3b3b3b; } /* Border for album image in sidebar */
+.box.box_albumart img:hover { border: 3px solid #4A8A7F; } /* Hover effect for album image in sidebar */
+#artist .sidebar div img { width: 194px; height: auto; border: 3px solid #3b3b3b; } /* Border for artist image in sidebar */
+#artist .sidebar div img:hover { border: 3px solid #4A8A7F; } /* Hover effect to artist image in sidebar */
+.sidebar input[type="text"],.sidebar textarea { width: 145px; }
+.sidebar select, .sidebar input { margin-bottom: 8px; }
+.sidebar input#artistsimilar, .sidebar form input[type="submit"] { margin-bottom: 0; } /* Removes unnecessary bottom margin of "Add similar artist" sidebar */
+.sidebar ol { margin-left: 0px; }
+#content,.thin { overflow: hidden; clear: both; }
+#searchbars { float: left; width: 666px; padding: 12px 15px; text-align: center; background-color: rgba(50, 100, 100, 0.15); -webkit-border-radius: 6px; -moz-border-radius: 6px; } /*background for row of search bars; torrents, artists, reqs, etc*/
+#searchbars input { width: 90px; font-size: 7.5pt; color: #777; }
+#searchbars ul,#searchbars form { display: inline; }
+#content { width: 960px; margin: 0 auto !important; overflow: hidden; line-height: 14px; text-align: justify; }
+#content .main_column,#content .sidebar { position: relative; }
+#content .main_column { float: left; width: 695px; }
+#content .main_column table { width: 100%; }
+#content .sidebar { float: right; width: 223px !important; padding: 10px; margin: 0 0 10px 20px; background-color: rgba(50, 50, 50, 0.4); border: 1px solid #3B3B3B; -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1); -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1); }
+#collage_table { margin-bottom: 20px; background: none; border: none; -webkit-box-shadow: none; -moz-box-shadow: none; }
+#collage_table td img { width: 128px; height: 128px; margin: 2px; border: 3px solid #3b3b3b; }
+#collage_table td img:hover { border: 3px solid #5fa296; }
+#collages,#collage_table,.forum_index,.torrent_table,.forum_post.box,.recent,table.border,.torrent_table.grouping,#userhistory table { width: 100% !important; }
+table[width="100%"],.box,.torrent_table,#request_table,#collages,.forum_index,table.border,.linkbox+table,form#messageform table ,.main_column table ,form[action="user.php"] table,table.staff,#userhistory table, table[style="width:400px;margin:0px auto;"] {
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: rgba(50,50,50,0.4);
+	border: 1px solid #3b3b3b;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	color: #868686; }
+.box.pad { padding: 0 !important; background: transparent; border: none; -webkit-box-shadow: none; -moz-box-shadow: none; }
+.tags a { color: #666; font-size: 7.5pt; }
+.tags a:hover { color: #777; }
+.head,.colhead td,.recent .colhead td,.colhead_dark td {
+	margin: -11px;
+	margin-bottom: 10px;
+	padding: 8px !important;
+	background: -webkit-gradient(linear,left top,left bottom,from(#333),to(#181818));
+	background: -moz-linear-gradient(center bottom,#181818,#333);
+	border: 1px solid #3b3b3b !important;
+	border-bottom-color: #3b3b3b !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(25,25,25,0.4);
+	-moz-box-shadow: inset 0 1px 0 rgba(25,25,25,0.4);
+	font: bold 8.5pt 'Lucida Grande',Helvetica,Arial,sans-serif !important;
+	color: #888 !important;
+	text-shadow: 0 1px 0 rgba(15,15,15,0.5); }
+#upload #content #dynamic_form #artistfields { padding: 5px 8px; }
+#upload #content #dynamic_form #artistfields input { margin: 3px 0; }
+select#importance { margin-left: 6px; }
+table[width="100%"] td,.torrent_table td,#requests td,#collages td,.forum_index td,table.border td,.linkbox+table td,form#messageform table td,form[action="user.php"] table td,table.staff td.nobr,#inbox form table td { padding: 8px; border: 1px solid #3b3b3b; border-bottom: 1px solid #3b3b3b; }
+#forums #content table.cat_list { border: 1px solid #3b3b3b; }
+table[width="100%"] .colhead td,table[width="100%"] .colhead_dark td,.torrent_table .colhead_dark td,#requests .colhead_dark td,#collages .colhead td,.forum_index .colhead td,#torrent_table .colhead td,table.border .colhead td,.linkbox+table .colhead td,form#messageform .colhead table td,#inbox form table .colhead td { border: 1px solid #3b3b3b !important; }
+#bookmarks .torrent_table .colhead_dark td:first-child { width: 5%; }
+table[width="100%"] td:first-child,.torrent_table td:first-child,#requests td:first-child,#collages td:first-child,.forum_index td:first-child,#torrent_table td:first-child,table.border td:first-child,.linkbox+table td:first-child,form#messageform table td:first-child,#inbox form table td:first-child { border-left: 1px solid #3b3b3b; }
+table[width="100%"] td:last-child,.torrent_table td:last-child,#requests td:last-child,#collages td:last-child,.forum_index td:last-child,#torrent_table td:last-child,table.border td:last-child,.linkbox+table td:last-child,form#messageform table td:last-child,#inbox form table td:last-child { border-right: 1px solid #3b3b3b; }
+#inbox form table tr:last-child td { border-bottom: 1px solid #3b3b3b !important; }
+#inbox form table td:first-child { border-left: 1px solid #3b3b3b !important; }
+#inbox form table td:last-child { border-right: 1px solid #3b3b3b !important; }
+.torrent_table.sign { text-align: center; }
+table.staff td.nobr { border-right: 1px solid #3b3b3b !important; }
+table.staff td.nobr:last-child { border-right: 1px solid #3b3b3b !important; }
+.nobr {  white-space: nowrap; } /* Makes filesize (MB) appear on a single line */
+.torrent_table .group { background-color: rgba(50, 50, 50, 0.0); }
+.torrent_table .group strong { font-size: 9pt; }
+.torrent_table .group strong a { color: #5e5e5e; }
+.new {color: #A33A3A}
+#artist tr.group_torrent td:first-child {padding-left: 50px; } /* Indentation for artist.php */
+#collage table#discog_table tr.group_torrent td:first-child, #bookmarks table#torrent_table tr.group_torrent td:first-child, #torrents table#torrent_table tr.group_torrent td:first-child { padding-left: 92px; } /* Indentation on torrents.php, bookmarks.php & collages.php */
+#collage div#content div.sidebar select { max-width: 150px; margin-top: 5px; } /* Fixes width & top margin of collector's download preference drop down */
+#bookmarks div#content div.sidebar select, #artist div#content div.sidebar select,#collage div#content div.sidebar select { max-width: 150px; margin-top: 5px; } /* Fixes width & top margin of collector's download preference drop down */
+#collage div#content div.sidebar form input {  max-width: 152px; } /* Fixes width of "Add torrent" input field */
+#collage div#content div.sidebar form i {  font-size: 7.5pt; } /* Smaller text size for "Add torrent" description */
+#collage div#content div.sidebar div.pad textarea { margin: 0 0 5px 0; max-width: 186px; } /* Fixes width of textarea for "Add comment" field on collages.php */
+#bookmarks div#content div.sidebar select#formats,#artist div#content div.sidebar select#formats { max-width: 150px; margin-top: 15px; } /* Fixes width of collector's format drop down on artist.php */
+#torrents div#content div.sidebar div#AddArtists input { max-width: 116px; margin-right: 5px; } /* Makes input and drop down for "Add artist" on one line */
+#torrents div#AddArtists select { max-width: 60px; }
+#torrents div#content div.sidebar form input, #artist div#content div.sidebar form input {  max-width: 140px; margin-right: 5px; } /* Makes input and + box for "Add tag" appear on one line */
+#torrents div#content div.sidebar .body br { display: none; } /* Removes unnecessary breaks in "Add tag" sidebar box */
+#bookmarks span br { display: none; } /* Removes unnecessary break on bookmarks.php main_column */
+#torrents #content .filter_torrents input.inputtext { width: 600px; } /* Fixes width of search and tag boxes on torrents.php */
+#wiki #content .main_column .box .pad div { font-size: 7pt; }
+#inbox form#searchbox { margin: 0px 0px 10px 0px; }
+#user table { width: 100%; }
+#forums #content blockquote { max-width: 765px; margin-bottom: 5px; }
+.recent { margin-bottom: 10px !important; padding: 0; -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1); -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1); }
+.recent td { padding: 10px; background-color: rgba(50,50,50,0.2); border: 1px solid #3b3b3b; border-right: 1px solid #3b3b3b; border-left: none; border-top: none; }
+.recent td:first-child { border-left: 1px solid #3b3b3b; }
+.recent td:last-child { border-right: 1px solid #3b3b3b; }
+.recent td img { width: 118px; height: 118px; }
+.cats_col { width: 25px; }
+.cats_music,.cats_comics,.cats_audiobooks,.cats_elearningvideos,.cats_comedy,.cats_applications,.cats_ebooks {  width: 25px !important; height: 25px !important; margin: 0 !important; }
+.cats_music { background: url('img/music.png'); }
+.cats_comics { background: url('img/comics.png'); }
+.cats_audiobooks { background: url('img/audiobook.png'); }
+.cats_elearningvideos { background: url('img/elearning.png'); }
+.cats_comedy {background: url('img/comedy.png'); }
+.cats_applications { background: url('img/apps.png'); }
+.cats_ebooks { background: url('img/ebooks.png'); }
+#recommended .head { margin-bottom: -11px !important; border-bottom-color: #3b3b3b !important; }
+#recommended #vanityhouse { margin-top: 21px; }
+.hide_torrents a { display: block; width: 25px; height: 25px; background-image: url('img/hide.png'); background-repeat: no-repeat; }
+.show_torrents a { display: block; width: 25px; height: 25px; background-image: url('img/show.png');background-repeat: no-repeat; }
+#torrent_table .colhead td[width="100%"] { width: 50% !important; }
+#discog_table .box.center {
+	width: 675px;
+	background-color: rgba(100, 100, 100, 0.15);
+	border: none;
+	padding: 10px;
+	text-align: center;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-border-radius: 5px; }
+#discog_table .box.center a {
+	font-size: 8px;
+	color: #4A8A7F;
+	font-weight: bold;
+	margin-right: 5px;
+	line-height: 18pt; }
+#discog_table .box.center a:hover { color: #5fa296; }
+.group_torrent td span { float: right; }
+.linkbox { margin-top: 20px; margin-bottom: 15px; text-align: center; color: #3b3b3b; font-size: 7.5pt; }
+.linkbox .center { margin-bottom: 5px; }
+.linkbox a { padding: 0 2px; }
+.head a { color: #4A8A7F; }
+.main_column .box { width: 674px; }
+.main_column .head { width: 678px; }
+.sidebar .box { width: 201px; }
+.sidebar .head { width: 205px; }
+.sidebar .box:last-child { margin-bottom: 0 !important; }
+.sidebar .box ul li { list-style: none; }
+td.unread,td.read,td.read_locked,td.unread_sticky,td.read_locked_sticky,td.unread_locked_sticky,td.read_sticky { width: 3.5%; background-repeat: none; background-position: center center; }
+td.unread { background-image: url('img/unread.png'); }
+td.read { background-image: url('img/read.png'); }
+td.read_locked { background-image: url('img/readlocked.png'); }
+td.unread_sticky { background-image: url('img/unreadsticky.png'); }
+td.read_sticky { background-image: url('img/readsticky.png'); }
+td.read_locked_sticky { background-image: url('img/readlockedsticky.png'); }
+td.unread_locked_sticky { background-image: url('img/unreadlockedsticky.png'); }
+table.forum_index tr td:nth-child(3) .last_topic a,td.unread+td >h4 a,td.unread+td >span.last_topic strong a,td.unread_locked+td >span.last_topic strong a,td.unread_sticky+td >span.last_topic strong a,td.unread_locked_sticky+td >span.last_topic strong a { color: #4A8A7F; }
+td.read+td >h4 a,td.read+td >span.last_topic strong a,td.read_locked+td >span.last_topic strong a,td.read_sticky+td >span.last_topic strong a,td.read_locked_sticky+td >span.last_topic strong a { color: #3b5551; }
+span.last_read a {
+	display: block;
+	width: 15px;
+	height: 12px;
+	margin: 0px 0px 0px 10px;
+	background: url(https://ptpimg.me/6ztz34.png) no-repeat center; }
+span.last_read a:hover { background-position-y: -24px; background: url(https://ptpimg.me/6ztz34.png) no-repeat center; }
+.forum_post .avatar { padding: 10px; width: 100px !important; background-color: rgba(0,0,0,0.12); border-right: 1px solid #3b3b3b; }
+.forum_post .avatar img { width: 120px !important; }
+.forum_post .body { padding: 15px; }
+.forum_post ul,.forum_post ol {	margin-left: 25px; }
+.forum_post blockquote, #inbox div.body>blockquote, #user blockquote, #torrents blockquote {
+	padding: 10px;
+	margin-top: 7px;
+	text-align: justify;
+	background-color: rgba(80,80,80,0.2);
+	border: 1px solid #333;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px; }
+.forum_unread tr.colhead_dark td {
+	background: -webkit-gradient(linear,left top,left bottom,from(#361c34),to(#191919)) !important;
+	background: -moz-linear-gradient(center bottom,#191919,#361c34) !important; }
+#torrents .filter_torrents .box.pad,#torrents div.thin >h2+div >form,#requests div.thin div:nth-child(3) form,#inbox #searchbox {
+	padding: 15px !important;
+	background-color: rgba(100, 100, 100, 0.15);
+	border: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; }
+#collage div.thin form table {
+	background: none;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none; }
+#requests div.thin div:nth-child(3) form table:nth-child(6) td { padding-top: 13px !important; padding: 13px 0 0 0 !important; border-bottom: 0 !important; }
+#torrents div.thin >h2+div >form div.submit,#collage div.thin form div.submit { padding-top: 13px; }
+div.thin >h2+div,div.thin >h2+.linkbox+div { margin-bottom: 10px; }
+div.thin >h2+div >form table,div.thin >h2+.linkbox+div table,.filter_torrents table { width: 100%; }
+div.thin >h2+.linkbox+div table {
+	border: none;
+	background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none; }
+div.thin >h2+.linkbox+div table td,.filter_torrents table td { border: none !important; }
+div.thin >h2+.linkbox+div td { padding-left: 10px !important; }
+div.thin >h2+.linkbox+div table td:first-child,.filter_torrents table:nth-child(1) td:first-child { font-size: 8pt; }
+.filter_torrents table.cat_list td { width: 8% !important; text-align: center !important; }
+.filter_torrents table:nth-child(2) td { padding: 8px 0 7px 0 !important; background-color: rgba(0, 0, 0, 0.0); }
+.filter_torrents .cat_list[width="100%"] {
+	background-color: rgba(0, 0, 0, 0.0);
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none; }
+div.thin >h2+div >form table td.label,div.thin >h2+.linkbox+div form table td.label,.filter_torrents table td:first-child { width: 20%; padding-right: 10px; text-align: right; }
+div.thin >h2+div >form table td.label { width: 20%; }
+.filter_torrents .submit { position: relative; padding-top: 5px; }
+.filter_torrents .submit input[value="Reset"] { display: none; }
+.filter_torrents .submit span {
+	position: absolute;
+	left: 115px;
+	top: 10px;
+	font-size: 8pt;
+	color: #6c6c6c;
+	line-height: 14pt; }
+.filter_torrents .submit span:before { content: "("; }
+.filter_torrents .submit span:after { content: ")"; }
+.filter_torrents .submit input[name="setdefault"],.filter_torrents .submit input[name="cleardefault"] { float: right; margin-left: 8px; }
+.filter_torrents .cat_list { border: none !important; }
+ul#artistcomplete {
+	position: absolute;
+	left: 129px;
+	top: 71px;
+	z-index: 1;
+	list-style: decimal;
+	text-align: left;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	border: 1px solid #333;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #868686; }
+#artistcomplete li:first-child {
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px; }
+#artistcomplete li:last-child {
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px; }
+#artistcomplete li { display: block !important; -webkit-box-sizing: border-box; padding: 5px 10px; }
+#artistcomplete li.highlight { background-color: rgba(100, 100, 100, 0.55); margin-right: 0px; }
+#lightbox { z-index: 3; position: fixed; text-align: center; top: 5%; left: 5%; width: 90%; height: 90%; padding: 0; overflow: auto; }
+#lightbox img { max-width: 100%; max-height: 100%; border: 5px solid #3b3b3b; }
+#curtain { z-index: 1; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
+#torrents h2+div.linkbox+h3+table.border >tbody >tr td:nth-child(2) { width: 55% !important; }
+form[action="user.php"] table textarea,form[action="user.php"] table input[type="text"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; }
+h3#irc+div.box.pad,h3#general+div.box.pad {
+	padding: 30px !important;
+	background-color: rgba(100, 100, 100, 0.15);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px; }
+h3#irc+div.box.pad ul,h3#general+div.box.pad ul { list-style: none; }
+h3#irc+div.box.pad ul li,h3#general+div.box.pad ul li { margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid #333; }
+h3#irc+div.box.pad ul li:last-child,h3#general+div.box.pad ul li:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+table.border[width="100%"] { margin-bottom: 0; }
+#collage table.border[width="100%"] tbody tr:nth-child(5) td { padding-bottom: 0; border-bottom: none !important; } /* Fixes random useless bottom border line on collages search field */
+#threadpoll p { margin-bottom: 20px; font-size: 16px; }
+ul.nobullet { list-style-type: none; }
+li.graph {
+	width: 100%;
+	height: 20px;
+	margin: 2px 0px 5px 0px;
+	padding: 5px;
+	background: rgba(0,0,0,0.5);
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; }
+li.graph .center_poll {
+	display: block;
+	height: 8px;
+	background: #666;
+	border: 1px solid #555;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-box-shadow: inset 0 -2px 3px #555;
+	-moz-box-shadow: inset 0 -2px 3px #555; }
+#index .graph .center_poll { margin-top: 0; }
+#inbox form table { margin-top: 20px; }
+#inbox form table td { border: 1px solid #3b3b3b !important; }
+#inbox form table td:nth-child(1) { width: 3%; }
+#inbox form table td:nth-child(3) { width: 15%; }
+#inbox form table td:nth-child(4) { width: 20%; }
+#inbox #searchbox { margin-top: -20px; }
+#inbox #searchbox input[type="text"] { margin-top: 10px; }
+td { border: 1px solid #6b6b6b; padding: 5px; text-align: left; }
+td.colhead {
+	margin: -11px;
+	margin-bottom: 10px;
+	padding: 8px !important;
+	background: -webkit-gradient(linear,left top,left bottom,from(#333),to(#222));
+	background: -moz-linear-gradient(center bottom,#222,#333);
+	border: 1px solid #3b3b3b !important;
+	border-bottom-color: #6b6b6b !important;
+	-webkit-box-shadow: inset 0 1px 0 rgba(25,25,25,0.4);
+	-moz-box-shadow: inset 0 1px 0 rgba(25,25,25,0.4);
+	font: bold 9pt 'Lucida Grande',Helvetica,Arial,sans-serif !important;
+	color: #888 !important;
+	text-shadow: 0 1px 0 rgba(15,15,15,0.5); }
+div.permission_container { float: left; width: 32%; }
+div.permission_container:nth-child(2) { padding: 0px 2%; }
+div.permission_container>table { width: 100%; }
+div.pad ul, div.body ul, table.torrent_table blockquote > ul, div.pad ol, div.body ol { padding-left: 25px; }
+#debug_database pre,#debug_report pre { white-space: pre-wrap; }
+#inbox textarea#body { display: inline; width: 580px; resize: vertical; } /* Fixes spacing on inbox.php and allows only vertical resizing */
+#quickpost input { width: 100%; width: 580px; } /* Fixes spacing on inbox.php message composition */
+#inbox textarea#quickpost { resize: vertical; } /* Fixes vertical resizing of textarea when replying to a message */
+#inbox div#quickpost { text-align: center; } /* Center aligns quickpost */
+#inbox div#quickpost h3 { text-align: left; padding-left: 185px; } /* Offsets Subject & Body headers to left of center */
+#inbox #buttons.center {text-align: center; } /* Centers Preview & Send Message buttons */
+#inbox #preview { margin: 0 20px 15px 20px; } /* Adds a margin to message preview */
+#forums #quickreplytext br { display: none; } /* Removes unnecessary break in quick reply */
+#inbox #messageform .box.pad { text-align: center; } /* Centers whutbbcode on inbox.php */
+#better #content .border tbody tr td input:nth-child(3) { width: 100%; } /* Fixes search box width on better.php */
+#better #content .border tbody tr td input:nth-child(4) { width: 140px; } /* Fixes width of button on better.php */
+#better #content .border td.label { text-align: right; } /* Right aligns Search text */
+#better #content .border { margin-bottom: 15px; } /* Adds missing margin between search box & better.php results */
+#staffpm #compose { text-align: center; } /* Begin styling for staff inbox */
+#staffpm #compose h3 { text-align: left; padding-left: 200px; }
+#staffpm #compose #subject { width: 550px; margin: 0px 0px 15px 3px; }
+#staffpm #content #message { resize: vertical; } /* End styling for staff inbox */
+#torrents .box_addartists input[type="submit"] { margin-bottom: 0px; } /* Removes unnecessary bottom margin for add button in Add Artist field */
+tr.rowa:nth-child(n+2):hover, tr.rowb:nth-child(n+2):hover, #vanityhouse tr:hover, tr.group_torrent:hover, #torrent_table tr.group:hover, #torrents div.thin > table tr:nth-child(n+2):hover, #torrent_table tr.torrent:hover, #discog_table tr:hover, #better tr:hover { background-color: rgba(50, 50, 50, 0.35); } /* Hover effect for table data */
+#rules td { padding-left: 10px; } /* Fixes incorrect table padding on rules.php */
+#rules table { border: 1px solid #3b3b3b; } /* Adds missing border to ratio requirements table */
+#styleurl { width: 520px; margin-left: 5px; } /* Adjusts width of user profile custom CSS url */
+#avatar, #email { width: 500px; } /* Adjusts width of user profile avatar & email input fields */
+#user #userform textarea { resize: vertical; width: 100%; } /* Adjusts width of user profile info textarea */
+#log table input:first-child { width: 100%; } /* Adjusts width of log search box */
+tr.unreadpm { background-color: rgba(120, 40, 120, 0.2); } /* Background color for unread private message */
+#inbox #preview { text-align: left; } /* Fixes alignment on private message composition preview */
+#logchecker table td:last-child { border-bottom: 1px solid #3b3b3b; }
+#log_contents { width: 100%; resize: vertical; } /* Fixes width and resizing of logchecker.php text area */
+#better table[width="100%"] tr:nth-child(n+2):hover { background-color: rgba(50, 50, 50, 0.35); } /* Hover effect for better.php */
+#top10 input[name="tags"] { width: 100%; } /* Adjusts width of top10 tags input box */
+#top10 td[class="center"] { text-align: right; }
+#top10 input[type="submit"] { margin-right: 138px; } /* Fixes right margin of Filter Torrents button */
+#artist td.small { text-align: center; } /* Center aligns + & x for Torrent Collapser++ */
+#collage input[size="70"] { width: 100%; } /* Fixes width of collages.php search boxes */
+#requests input[size="75"] { width: 100%; } /* Fixes width of requests.php search box */
+#requests input[size="60"] { width: 100%; } /* Fixes width of requests.php tags search box */
+ul.collage_images { width: 100%; } /* Fixes width of collage artwork */
+ul.collage_images li { width: 118px; height: 118px; margin: 5px; border: 3px solid #3b3b3b; } /* Fixes width of collage li */
+ul.collage_images img { width: 118px; } /* Fixes width of collage artwork thumbnails */
+ul.collage_images li:hover { border: 3px solid #5fa296; } /* Hover effect for collages */
+table#vanityhouse { margin-bottom: 0; }
+div>ul.stats { text-align: left; }
+#index div.box em { font-size: 7pt; }
+#upload_table table { margin-bottom: 10px; } /* Fixes missing bottom margin on upload.php */
+#upload p input { width: 600px; } /* Fixes width of personal announce url on upload.php */
+#forums pre { max-width: 700px; } /* Fixes pre width */
+.bbcodes button {
+	cursor: pointer;
+	overflow: hidden;
+	float: none !important;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15),inset -1px 1px 0 rgba(255,255,255,0.12);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15),inset -1px 1px 0 rgba(255,255,255,0.12);
+	background-color: rgba(100, 100, 100, 0.6) !important;
+	border: 1px solid #1D1D1D !important;
+	color: #999 !important;
+	text-shadow: none !important;
+	font-size: 7.5pt;
+	width: 20px;
+	height: 20px;
+	margin-top: 5px; }
+.bbcodes {
+	padding: 2px !important;
+	margin: 5px auto 10px auto !important; }
+.pressed {
+	cursor: pointer;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15),inset -1px 1px 0 rgba(255,255,255,0.12);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15),inset -1px 1px 0 rgba(255,255,255,0.12);
+	background-color: rgba(100, 100, 100, 0.8) !important;
+	color: #eee !important;
+	text-shadow: none !important;
+	font-size: 7.5pt;
+	width: 20px;
+	height: 20px;
+	margin-top: 5px; }
+#format-hide {
+	background-color: rgba(100, 100, 100, 0.15);
+	width: 100%;
+	margin: 15px 0px 20px 0px !important;
+	padding: 6px 0;
+	border: none;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	text-align: center;
+	color: rgba(0,0,0,0.0); }
+#format-hide span{ color: #4A8A7F !important; border: none !important; padding: 2px 2px; }
+#format-hide span:hover { color: #666 !important; }
+#format-hide .hider-f { padding: 2px 2px; color: #666 !important; text-decoration: none !important; }
+#format-hide .hider-f:hover{ color: #4A8A7F !important; }
+.box ul.stats li a:nth-child(3), .remove_artist a { color: #652727; } 
+#requests { margin-bottom: 10px; }
+.sidebar form[action="artist.php"] a, .sidebar form[action="bookmarks.php"] a, .sidebar form[action="collages.php"] a { color: #652727; } /* Red [X]'s on artist.php, bookmarks.php & collages.php */
+.whattf_album_desc_button {
+	background-color: rgba(100, 100, 100, 0.6) !important;
+	border: 1px solid #1D1D1D !important;
+	color: #999 !important;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 2px;
+	margin-left: 5px;
+	text-transform: lowercase;
+	text-shadow: none; }
+.whattf_album_desc_button:hover { border-color: #4A8A7F !important; }
+.whattf_album_desc_button:active { border-color: #4A8A7F !important; }
+#torrents #content .filter_torrents .inputtext[name="year"] { width: auto; }  /* Bug fix for advanced torrent search width (per porkpie) */
+#debug_report { white-space: pre-wrap; } /* Debug developer tools (per porkpie) */
+#debug_database td.query { padding: 0; } /* Debug developer tools per porkpie */
+#debug_database td.query>div { overflow: auto; padding: 8px; width: 796px; } /* Debug developer tools per porkpie */
+#upload #artist, #upload #title, #upload #yadg_input, #upload #image, #upload input[title="Enter a URL"] { width: 400px; } /* Width adjustments of upload fields */
+#upload #year { width: 80px; } /* Width adjustments of upload fields */
+#upload #tags { width: 266px; } /* Width adjustments of upload fields */
+#upload #record_label, #upload #catalogue_number { width: 300px; } /* Width adjustments of upload fields */
+#yadg_response { padding-left: 16px; padding-top: 8px; } /* Adjusts placement of YADG feedback */
+#torrents #torrent_table tr.group span a {
+	display: block;
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+	padding: 2px 0px;
+	background: url("img/bookmark.png") no-repeat top left;
+	background-position: 0px 5px;	
+	font-size: 0pt; }
+#whmf_offer { border: 1px solid #3b3b3b !important; padding-left: 30px; padding-right: 10px; } /* Styling for What.CD Multiple Format Uploader */
+#upload tbody tr td table { text-align: center; margin: auto; } /* Centers What.CD Multiple Format Uploader torrent status table */
+#whmf_torrent_status tr td { border-bottom: 1px solid #3b3b3b !important; } /* Fixes bottom border for torrent status in What.CD Multiple Format Uploader */
+td.gm_albumartdisplay img { padding: 4px; }
+/* #bookmarks ul.collage_images li:last-child { margin-bottom: 20px; } Fixes bottom margin on bookmarks page */
+#torrents tbody tr td.center { padding-left: 5px; } /* Fixes left padding on Non-wiki group editing text */
+#torrents input[name="year"], #torrents input[name="record_label"], #torrents input[name="catalogue_number"], #torrents input[value="Split"], #torrents input[name="targetgroupid"], #torrents input[name="summary"], #torrents input[name="image"] { width: 100%; } /* Fixes width of torrent edit page input fields */
+#torrents input[value="Edit"], #torrents input[value="Submit"], #torrents input[value="Rename"], #torrents input[value="Merge"] { margin-top: 6px; } /* Fixes missing top margin of edit button on torrent edit page */
+div.thin>h2 { margin-top: 10px; } /* Temp fix for artist info top margin */
+textarea.hidden { display: none; } /* Fixes textarea not being hidden properly (credit: hateradio) */
+#user #requests { margin-bottom: 0px; } /* Removes unnecessary bottom margin on user profile requests table */
+#rules #actual_rules { padding: 10px 30px !important; margin-bottom: 20px; background-color: rgba(100,100,100,0.1); -webkit-border-radius: 5px; -moz-border-radius: 5px; } /* Background for rules detail page */
+#donate div.thin { padding: 10px 30px !important; margin-bottom: 20px; background-color: rgba(100,100,100,0.15); -webkit-border-radius: 5px; -moz-border-radius: 5px; } /* Background for donation page */
+#rules .before_rules { margin-top: 10px; } /* Fixes missing bottom margin after adding background */
+.breadcrumbs { text-align: center; } /* Fixes alignment of bottom breadcrumbs */
+#upload p.min_padding { font-size: 6.5pt; }
+#YAVAH.box p[onclick] { margin: 3px 0; } /* Shortens vertical paragraph margins for YAVAH */
+#YAVAH.box input { margin-bottom: 0; } /* Fixes bottom margin of input for YAVAH */
+#YAVAH.box div[style] { padding: 0 !important; } /* Fixes unnecessary padding for YAVAH */
+#searchforum input[value="Search"] { margin-bottom: 0; } /* Start fix for forum search form */
+#searchforum input#searchbox[id="searchbox"], #searchforum input#username[id="username"] { width: 100%; }
+#searchforum table.border td { padding: 6px 10px; }
+#searchforum div>h3, #searchforum div>br { display: none; }
+#searchforum div { margin-top: 20px; } /* End fix for forum search form */
+#user .box.pad { padding: 10px; background-color: rgba(50, 50, 50, 0.4); border: 1px solid #3B3B3B; -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.1); -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.1); }
+#user .stats.nobullet { font-size: 7.5pt !important; } /* Sidebar font size on user's stat page */
+#artist div.sidebar div[style="text-align:center;padding:10px 0px;"] { padding: 0 !important; }
+#top10 div[style="text-align: right;"] { text-align: center !important; margin-bottom: 10px;}
+#disclaimer_container { display: none; }
+#footer br { display: none; }
+#collage #content form[method="get"], #top10 #content form { padding: 12px 15px; text-align: center; background-color: rgba(100, 100, 100, 0.15); -webkit-border-radius: 6px; -moz-border-radius: 6px; border: none !important; margin-bottom: 10px; }
+#rules li[id="r2.2.0"] p { background: url("img/trump.png") no-repeat !important; width: 527px; height: 215px; margin-left: 179px; }
+#rules li[id="r2.2.0"] img, #rules li[id="r2.2.0"] em { display: none; }
+#rules span#Index { font-size: 7.5pt; margin-left: 5px; }
+td.gm_albumartdisplay img { border: 3px solid #3B3B3B; padding: 0 !important; }
+td.gm_albumartdisplay img:hover { border: 3px solid #5fa296; }
+#torrents #content>h2,#torrents #content>h3 { text-transform: capitalize; }
+#index div.thin.center>h1 { margin-bottom: 10px; font-size: 11pt; line-height: 14pt; } /* Library contest scoreboard header */
+#index .sidebar div.box:first-child div.center { font-size: 7.5pt; margin-top: 5px; }
+#better tbody { background-color: rgba(50,50,50,0.4); } /* Fixes missing background color on better.php pages */
+#logchecker blockquote>pre { padding: 30px !important; background-color: rgba(100, 100, 100, 0.1); -webkit-border-radius: 5px; -moz-border-radius: 5px; margin-top: 8px; } /* Logchecker background */
+#torrents .header h2 { text-transform: capitalize; } /* Capitalize header for torrents */
+
+#noty_bottomRight_layout_container>li { background-color: rgba(45, 45, 45, .85) !important; border-color: rgba(0, 0, 0, 0.95) !important; color: #9A9A9A !important; }
+.noty_bar div { background-color: inherit !important; border: 0 !important; color: inherit !important; font-size: 8pt !important; }
+.noty_message { padding: 8px 10px 0px !important; }
+
+#userinfo_minor .new-subscriptions a { color: #A33A3A; }
+
+/*#nav_userclass {display: block !important; position: relative}*/
+.hidden.userclass {
+    display: inline-block;
+    left: 0;
+    position: relative;
+    font-size: 13px;
+    font-weight: 550;
+    text-transform: lowercase;
+    font-family:sans-serif;
+    color: rgba(109, 229, 208, 0.74);
+  }

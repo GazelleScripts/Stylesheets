@@ -1,0 +1,1705 @@
+/*
+Tomato - by Trico & Brett12345
+Thank you smokethecosmos for extensive testing and invaluable input.
+
+Thank you to these people too, for early testing and support:
+sxo, newman, zano, UnemplloydBanks, mirroring
+ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,100,100italic&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic);
+
+/* Global base elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Open Sans;
+    /* #000 is too sharp against the rest of the theme */
+}
+*, strong {
+    color: #222;
+}
+body {
+    background-color: #eee;
+    font-family: Open Sans;
+    font-size: 12px !important;
+    overflow-x: hidden;
+}
+a,
+a strong,
+a[href*="#"][class="brackets"] {
+    color: gray !important;
+    text-decoration: none;
+    /* to keep the info, concerts and comments links from turning orange */
+}
+a, strong, span {
+	padding: 0 !important;
+}
+a:hover, a strong:hover, a[href *= "#"][class="brackets"]:hover {
+    color: #222 !important;
+}
+h2,
+h3 {
+    color: #222;
+}
+td {
+    padding: 5px 10px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+tbody {
+    border: 1px solid #eee;
+}
+#wrapper {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 900px;
+    padding: 50px 30px 30px;
+}
+ul {
+    list-style-type: square !important;
+}
+ol[style="padding-left: 5px;"] {
+    padding-left: 10px;
+}
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+em, span[style*="font-style: italic"] {
+    font-style: normal !important;
+    font-weight: bold;
+}
+/* Input/textarea elements */
+input {
+    background-color: #eee;
+    border: 0 !important;
+    color: gray;
+    font-size: 11px !important;
+    padding: 5px 10px !important;
+}
+input, select {
+    margin-left: 0 !important;
+}
+input[type=submit],
+input[type=button] {
+    background-color: tomato !important;
+    color: #fff;
+    width: auto !important;
+    /* Some buttons are designed to be longer but we don't want that */
+}
+input[type=submit]:hover,
+input[type=button]:hover {
+    color: #fff;
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+}
+input[type=submit] {
+	margin: 20px 5px 0 0;
+}
+input,
+select,
+textarea {
+    font-size: 12px;
+    font-family: Open Sans;
+}
+input:hover,
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=email]:focus,
+textarea:hover,
+textarea:focus {
+    background-color: #ddd;
+    color:#555;
+}
+textarea {
+    background-color: #eee;
+    border: 0;
+    padding: 10px;
+    width: 96%;
+}
+/* Navigation header (menu) */
+#header {
+    height: 130px;
+    margin-top: -20px;
+}
+#header ul a {
+    color: #aaa !important;
+}
+#header ul a:hover {
+    color: #222 !important;
+}
+#userinfo_stats {
+	position: absolute;
+	top: 17px;
+	left: 192px;
+}
+#userinfo_stats li {
+	display: none !important;
+}
+#userinfo_stats:hover {
+	width: 155px !important;
+	background: #eee;
+	padding: 10px 15px;
+	border-radius: 3px;
+}
+#userinfo_stats * {
+	font-size: 10px;
+}
+#userinfo_stats:after {
+	content: 'Stats';
+	color: #aaa;
+}
+#userinfo_stats span,
+#userinfo #userinfo_stats > li a:hover {
+	color: #222 !important;
+}
+#userinfo_stats:hover li {
+	display: inline !important;
+}
+#userinfo_stats:hover:after {
+	content: '';
+}
+#userinfo_stats li:nth-child(even) {
+	float: right;
+}
+#userinfo {
+	width: 315px;
+}
+#menu #nav_irc,
+#userinfo_minor #nav_friends,
+#userinfo_minor #nav_comments,
+#menu #nav_index {
+    display: none;
+}
+#userinfo_major li.brackets:before {
+	/* Vivaldi/Chrome fix */
+	display: none !important;
+}
+#header ul li {
+    display: inline;
+    margin: 0 5px 0 0 !important;
+}
+/* Logo */
+#header #logo {
+    padding-bottom: 3px;
+	border-bottom: 3px solid tomato !important;
+}
+#header #logo a {
+    color: #444 !important;
+    font-size: 23px;
+    font-weight: bold;
+}
+#header #logo a:hover {
+    color: #222 !important;
+}
+#header #logo a:after {
+    content: 'PassTheHeadphones';
+}
+/* Userinfo */
+#userinfo {
+    position: relative;
+    top: 10px;
+}
+#userinfo_minor {
+	width: 410px;
+    bottom: 16px;
+	text-align: right;
+    float: right;
+    left: 589px;
+    position: relative;
+}
+#userinfo_minor .active a {
+	font-weight: bold;
+}
+#userinfo_username:hover li {
+	display: inline-block !important;
+}
+#userinfo_username:after {
+	content: '+';
+	color: tomato;
+}
+#userinfo_username:hover:after {
+	content: '';
+}
+#userinfo_username li#nav_userinfo {
+	display: inline-block !important;
+}
+#userinfo_username li {
+	display: none !important;
+}
+#nav_useredit a {
+	margin-left: -9px !important;
+}
+#user #content .main_column tbody > tr.colhead td[colspan="5"] {
+	padding: 5px 10px !important;
+}
+/* Menu */
+#menu {
+    bottom: 41px;
+    left: 537px;
+    position: relative;
+}
+/* Searchbars */
+#searchbars {
+    left: 255px;
+    position: relative;
+    top: -122px;
+}
+#searchbars ul li {
+    display: inline-block !important;
+    padding: 15px;
+    width: 70px;
+}
+#searchbars input {
+    padding: 4px 10px !important;
+    margin: 3px;
+}
+/* Auto complete */
+.autocomplete-suggestions {
+    border: 0;
+    margin-top: 0;
+    width: 150px !important;
+}
+.autocomplete-suggestions div {
+    background-color: #f4f4f4;
+}
+.autocomplete-suggestions strong {
+    color: tomato !important;
+}
+.autocomplete-suggestions div:hover,
+.autocomplete-selected {
+    background-color: #555 !important;
+    color: #fff !important;
+}
+/* Content (basic styling) */
+#content {
+    min-height: 200px;
+}
+#content .main_column,
+#content .sidebar {
+    padding: 10px 0 0 10px;
+    position: relative;
+}
+#content .sidebar {
+    float: right;
+    width: 245px;
+}
+#content:after,
+.thin:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size:0;
+    height:0;
+    visibility: hidden;
+}
+#collages,
+#personal_collages,
+.layout,
+#collage_table,
+.forum_index,
+.torrent_table,
+.forum_post.box,
+.recent,
+table.border,
+.torrent_table.grouping,
+#userhistory table {
+    width: 100% !important;
+}
+.rowb {
+    background-color: #fcfcfc;
+}
+.nobr {
+    color: gray;
+    white-space: nowrap;
+}
+div.linkbox > a strong,
+div.linkbox > strong {
+	font-weight: normal !important;
+}
+div.linkbox > strong {
+	font-weight: bold !important;
+}
+.message_table {
+    width: 100%;
+}
+.scale_image {
+    max-width: 100% !important;
+}
+.avatar {
+    width: 100px !important;
+}
+.nobullet {
+    list-style: none !important;
+}
+.r00 {
+    color: #F00;
+}
+.r01 {
+    color: #FF1300;
+}
+.r02 {
+    color: #FF1300;
+}
+.r03 {
+    color: #FF2600;
+}
+.r04 {
+    color: #FF4C00;
+}
+.r05 {
+    color: #FF5E00;
+}
+.r06 {
+    color: #FF5E00;
+}
+.r07 {
+    color: #FF7100;
+}
+.r08 {
+    color: #fd4337;
+}
+.r09 {
+    color: #FA0;
+}
+.r10 {
+    color: #74C42E;
+}
+.r20 {
+    color: #418B00;
+}
+.r50 {
+    color: #418B00;
+}
+.r99 {
+    color: #418B00;
+}
+.size1 {
+    font-size: 0.75em;
+    line-height: normal;
+}
+.size2 {
+    font-size: 1em;
+    line-height: normal;
+}
+.size3 {
+    font-size: 1.25em;
+    line-height: normal;
+}
+.size4 {
+    font-size: 1.5em;
+    line-height: normal;
+}
+.size5 {
+    font-size: 1.75em;
+    line-height: normal;
+}
+.size6 {
+    font-size: 2em;
+    line-height: normal;
+}
+.size7 {
+    font-size: 2.25em;
+    line-height: normal;
+}
+.size8 {
+    font-size: 2.5em;
+    line-height: normal;
+}
+.size9 {
+    font-size: 2.75em;
+    line-height: normal;
+}
+.size10 {
+    font-size: 3em;
+    line-height: normal;
+}
+img[alt="Snatches"] {
+	width: 0;
+	height: 15px;
+	padding-right: 25px;
+	background: transparent url('https://i.imgur.com/YFLL6UY.png') top left no-repeat;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+img[alt="Seeders"] {
+	width: 0;
+	height: 15px;
+	padding-right: 25px;
+	background: transparent url('https://i.imgur.com/diNusgB.gif') top left no-repeat;
+	background-size: 14px 16px;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+img[alt="Leechers"] {
+	width: 0;
+	height: 15px;
+	padding-right: 25px;
+	background: transparent url('https://i.imgur.com/mC66SNP.gif') top left no-repeat;
+	background-size: 14px 16px;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+.linkbox {
+    margin: 10px 0;
+}
+.sidebar .box ul li {
+    list-style: none;
+}
+div.linkbox .center {
+    margin: 10px 0 !important;
+}
+div.linkbox:nth-child(3) .brackets {
+    padding: 0 !important;
+    margin-left: 0 !important;
+}
+strong.important_text,
+.warning,
+#vawarning,
+#upload [style*="color: red;"] {
+    color: tomato !important;
+    font-weight: bold;
+}
+.new, .error, .error_message {
+    color: tomato;
+}
+ul[class="poll nobullet"] li {
+	margin-left: 0;
+	list-style: none !important;
+	/* For staff poll changes */
+}
+li.graph {
+	list-style: none !important;
+	/* For staff poll changes */
+    background-color: #eee;
+    height: 12px;
+    margin: 5px 0 10px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+li.graph .center_poll {
+	list-style: none !important;
+	/* For staff poll changes */
+    background-color: tomato;
+    display: block;
+    height: 3px;
+}
+#recommended,
+.box,
+#discog_table .torrent_table,
+.forum_post {
+    margin-bottom: 5px !important;
+}
+.postlist li {
+    margin-left: 20px;
+}
+#discog_table > .center {
+    background-color: #eee;
+    padding: 5px 10px;
+}
+.main_column {
+    margin-left: -10px;
+    width: 625px;
+}
+a.brackets[onclick*="'Show' : 'Hide'"][href="#"],
+a#ft_toggle.brackets[onclick="return toggleTorrentSearch(0);"][href="#"] {
+	font-size: 0;
+}
+a.brackets[onclick*="'Show' : 'Hide'"][href="#"]:after,
+a#ft_toggle.brackets[onclick="return toggleTorrentSearch(0);"][href="#"]:after {
+	content: '▼';
+	font-size: 12px;
+}
+/* Boxes */
+.head,
+.colhead,
+.colhead_dark {
+    background-color: #eee;
+}
+.head {
+    padding: 5px 10px !important;
+}
+.body {
+    padding: 10px;
+}
+.box > * {
+    padding: 10px;
+}
+.sidebar .box {
+    border: 1px solid #eee;
+}
+.box li {
+    font-size: 12px;
+    margin-left: 20px;
+}
+.pad {
+    border-top: 1px solid #eee;
+}
+[class="box news_post"] .pad,
+.box {
+    border: 1px solid #eee;
+}
+/* Start page (index.php) */
+#recommended  {
+    /* Vanity House */
+    border: 0 !important;
+}
+#index [class="box news_post"]:not(:nth-child(2)) [class="pad"] {
+    display: none !important;
+}
+#index [class="box news_post"]:not(:nth-child(2)) [class="pad hidden"] {
+    display: block !important;
+}
+#index [class="box news_post"] .head {
+    font-size: 11px;
+}
+#recommended .head {
+    font-size: 0;
+}
+#recommended .head strong {
+    font-size: 11px;
+}
+[onclick*="$('#vanityhouse').gtoggle()"]:after {
+	content: '►';
+    font-size: 12px;
+}
+#index .sidebar div[class="head colhead_dark"] strong  {
+	font-size: 11px !important;
+}
+#index .sidebar .box {
+	border-bottom: 0;
+}
+#index .sidebar .pad,
+#index .sidebar .stats  {
+    display: none !important;
+}
+#index .sidebar .box:hover .pad,
+#index .sidebar .box:hover .stats {
+    display: block !important;
+}
+#index .sidebar > div > div[class="head colhead_dark"] > strong:after {
+	content: '▼';
+	float: right;
+	-moz-opacity: 0.5;
+	opacity: 0.5 !important;
+}
+#index .sidebar [class="stats nobullet"] li {
+    margin-left: 5px;
+}
+#index #recommended a.brackets {
+    float: right;
+}
+[class="box news_post"] {
+    border: 0;
+}
+#index .sidebar li {
+    margin-left: 0;
+}
+#index .main_column {
+	width: 700px !important;
+}
+#index .sidebar {
+	width: 180px !important;
+}
+#index .sidebar li,
+#index .sidebar * {
+	font-size: 11px !important;
+}
+#index .sidebar .head strong {
+	font-size: 12px !important;
+}
+#index #merchbox > div[class="center pad"]:nth-of-type(3) {
+	display: none !important;
+}
+/* Forums */
+#newthreadform #buttons input {
+    margin-right: 5px;
+}
+.forum_list h3 {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.forum_list h3:first-child {
+    margin-top:0;
+}
+#forums .linkbox a.brackets,
+#forums .forum_post a.brackets,
+a.brackets[onclick*="Quote('"],
+#torrents .brackets[href*="reports.php"],
+#preview_wrap_0 .brackets {
+	-moz-opacity: 0.5;
+    opacity: 0.5 !important;
+    color: #222;
+}
+#forums a:hover,
+#forums .linkbox a.brackets:hover,
+#forums .forum_post a.brackets:hover,
+a.brackets[onclick*="Quote('"]:hover,
+#torrents .brackets[href*="reports.php"]:hover,
+#preview_wrap_0 .brackets:hover,
+#forums #newthreadpreview .brackets[onclick="return false;"][href="#"]:first-child:hover,
+#forums #newthreadpreview .brackets[onclick="return false;"][href="#"]:nth-child(2):hover,
+#forums #newthreadpreview #barpreview .brackets[href="#newthreadpreview"]:hover	{
+	-moz-opacity: 1;
+    opacity: 1 !important;
+    color: #555 !important;
+}
+#forums div.linkbox,
+#forums div.linkbox a,
+.linkbox .center {
+    text-align: left;
+    margin-left: 0 !important;
+}
+a.brackets[onclick*="Quote('"] {
+    /* Works in other parts of the site too */
+    display: inline-block;
+    background-image: url(https://i.imgur.com/O2wu8MU.png);
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    width: 17px !important;
+    text-indent: -9999px;
+}
+#forums [onclick*="Edit_Form"] {
+    display: inline-block;
+    background-image: url(https://i.imgur.com/ImD9IUE.png);
+    background-repeat: no-repeat;
+    margin-left: 0;
+    width: 17px !important;
+    text-indent: -9999px !important;
+}
+#forums a.brackets[onclick*="Delete('"] {
+    display: inline-block;
+    background-image: url(https://i.imgur.com/GUr0DBa.png);
+    background-repeat: no-repeat;
+    margin-left: 0;
+    width: 17px !important;
+    text-indent: -9999px !important;
+}
+#forums a.brackets[href*="forums.php?action=sticky_post"] {
+    display: inline-block !important;
+    background-image: url(https://i.imgur.com/9v20DSH.png) !important;
+    background-repeat: no-repeat !important;
+    margin-left: 0 !important;
+    width: 17px !important;
+    text-indent: -9999px !important;
+}
+.send_form input[value=Preview],
+.send_form input[value=Editor],
+.send_form input[value=Edit]{
+    margin-right: 10px;
+}
+blockquote {
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+blockquote > blockquote,
+blockquote > blockquote > blockquote > blockquote,
+blockquote > blockquote > blockquote > blockquote > blockquote > blockquote {
+    background-color: #ddd;
+}
+blockquote,
+blockquote > blockquote > blockquote,
+blockquote > blockquote > blockquote > blockquote > blockquote {
+    background-color: #f4f4f4;
+}
+#preview > .quoteheader {
+    margin-right: -10px !important;
+}
+td.read+td >h4 a,td.read+td >span.last_topic strong a,td.read_locked+td >span.last_topic strong a,td.read_sticky+td >span.last_topic strong a,td.read_locked_sticky+td >span.last_topic strong a {
+    color: #bbb !important;
+}
+table.forum_index tr td:nth-child(3) .last_topic a,td.unread+td >h4 a,td.unread+td >span.last_topic strong a,td.unread_locked+td >span.last_topic strong a,td.unread_sticky+td >span.last_topic strong a,td.unread_locked_sticky+td >span.last_topic strong a {
+    color: #666 !important;
+}
+table.forum_index tr * {
+    font-weight:normal
+}
+/*
+.donor_icon {
+	height: 16px;
+	margin-left: -2px;
+	padding: 5px;
+	width: 16px;
+	margin-bottom: -5px !important;
+	height: 13px;
+	width: 15px;
+}
+.donor_icon[alt="Donor"] {
+	/ [alt="Donor"] Important selector for custom donor icons (stupid VIPs) /
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    height: 0;
+    margin-left: 5px;
+	margin-bottom: 0 !important;
+    padding: 5px;
+    width: 0;
+}
+.donor_icon[alt="Donor"][src="static/common/symbols/donor.png"] {
+	background-image: url(https://i.imgur.com/ffM3dOI.png);
+}
+.donor_icon[alt="Donor"][src="static/common/symbols/donor_2.png"] {
+	background-image: url(https://i.imgur.com/wJb49Ax.png);
+}
+.donor_icon[alt="Donor"][src="static/common/symbols/donor_3.png"] {
+	background-image: url(https://i.imgur.com/wPjlxrA.png);
+}
+.donor_icon[alt="Donor"][src="static/common/symbols/donor_4.png"] {
+	background-image: url(https://i.imgur.com/e476pUU.png);
+}
+.donor_icon[alt="Donor"][src="static/common/symbols/donor_5.png"] {
+	background-image: url(https://i.imgur.com/I51ehxd.png);
+}
+.donor_icon[alt="Donor"][src="static/common/symbols/donor_6.png"] {
+	background-image: url(https://i.imgur.com/XyA4uxd.png);
+}
+*/
+#forums div:not([id="newthreadpreview"]) table:not([id="preview_wrap_0"]) .donor_icon {
+    margin-left: -5px !important;
+}
+#forums div[id="newthreadpreview"] table:not([id="preview_wrap_0"]) .donor_icon {
+    margin-left: 5px !important;
+}
+#torrents [id*="post"] .colhead_dark {
+    font-size: 0;
+}
+#forums [id*="post"] span,
+#forums [id*="post"] a,
+#forums [id*="post"] strong,
+#torrents [id*="post"] span,
+#torrents [id*="post"] a,
+#torrents [id*="post"] strong {
+    font-size: 12px;
+    margin: 0;
+}
+#forums [id*="post"] .colhead_dark span,
+#forums [id*="post"] .colhead_dark a,
+#forums [id*="post"] .colhead_dark strong {
+    margin: 0 2.5px;
+}
+#forums .user_title * {
+	margin: 0 !important;
+}
+#forums [id*="post"] .colhead_dark,
+#torrents [id*="post"] .colhead_dark {
+    font-size: 0 !important;
+}
+img.tooltip[alt=Warned] {
+    background-image: url(https://i.imgur.com/Qo1MZOG.png);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    height: 0;
+    margin-left: 5px;
+    padding: 6px;
+    width: 0;
+}
+.time.tooltip {
+    padding-right: 5px;
+}
+#forums .linkbox:first-of-type a.brackets {
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    height: 0;
+    margin-left: 5px !important;
+    padding-left: 22px !important;
+    width: 0;
+}
+#forums .linkbox a.brackets[href*="forums.php?action=new"] {
+    background-image: url(https://i.imgur.com/mKIzsIi.png);
+}
+#forums .linkbox a.brackets[id*="subscribe"] {
+    background-image: url(https://i.imgur.com/a8xZyKq.png);
+}
+#forums .linkbox a.brackets[onclick*="$('#searchforum"],
+#forums .linkbox a.brackets[onclick*="$('#searchthread"] {
+    background-image: url(https://i.imgur.com/016nGG2.png);
+}
+#forums td[class*="tooltip"] {
+    /* Important selector for donator forum */
+    background-position: 8px 9px;
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+}
+table.forum_index > tbody > tr > td:nth-child(2) {
+    width: 120px !important;
+}
+#forums td.unread {
+    background-image: url(https://i.imgur.com/ESvFbWx.png);
+	-moz-opacity: 0.7;
+    opacity: 0.7;
+}
+#forums td.read {
+    background-image: url(https://i.imgur.com/0P4iPby.png);
+	-moz-opacity: 0.7;
+    opacity: 0.5;
+}
+#forums td.read_locked {
+    background-image: url(https://i.imgur.com/0P4iPby.png);
+	-moz-opacity: 0.5;
+    opacity: 0.5;
+}
+#forums td.read_sticky {
+    background-image: url(https://i.imgur.com/u74Z9Tq.png);
+	-moz-opacity: 0.8;
+    opacity: 0.8;
+}
+#forums td.read_locked_sticky {
+    background-image: url(https://i.imgur.com/u74Z9Tq.png);
+	-moz-opacity: 0.8;
+    opacity: 0.8;
+}
+#forums td.unread_sticky {
+    background-image: url(https://i.imgur.com/u74Z9Tq.png);
+	-moz-opacity: 0.8;
+    opacity: 0.8;
+}
+#forums td.unread_locked_sticky {
+    background-image: url(https://i.imgur.com/u74Z9Tq.png);
+	-moz-opacity: 0.8;
+    opacity: 0.8;
+}
+#forums td[class*="tooltip"]:first-child {
+    margin-top: 3px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: -5px;
+    padding-right: 0;
+}
+.forum_index [style="width: 7%;"],
+.forum_index .number_column {
+    display: none;
+}
+.forum_index [class*="row"] td:nth-child(2) {
+    width: 200px !important;
+}
+#forums .brackets:after,
+#forums .brackets:before,
+#forums .linkbox .center a.brackets:before,
+#forums .linkbox .center a.brackets:after {
+    content: "";
+}
+#forums .brackets[href*="reports.php"],
+#torrents .brackets[href*="reports.php"],
+#preview_wrap_0 .brackets,
+#forums #newthreadpreview .brackets[onclick="return false;"][href="#"]:first-child,
+#forums #newthreadpreview .brackets[onclick="return false;"][href="#"]:nth-child(2),
+#forums #newthreadpreview #barpreview .brackets[href="#newthreadpreview"]	{
+    background-image: url(https://i.imgur.com/2PslLlN.png);
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    padding-left: 22px;
+	-moz-opacity: 0.5;
+    opacity: 0.5 !important;
+}
+#forums .forum_post .brackets[href*="reports.php"],
+#torrents .brackets[href*="reports.php"],
+#preview_wrap_0 .brackets {
+    font-size: 0 !important;
+    margin-left: 2px;
+    padding: 0 0 16px 16px;
+    position: relative;
+    top: 0;
+}
+#preview_wrap_0 .brackets {
+    top: -12px !important;
+}
+/*[alt=Banned] {
+	
+    background-image: url(https://i.imgur.com/tKzTBY1.png);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    height: 0;
+    margin-left: 5px;
+    padding: 5px;
+    width: 0;
+	-moz-opacity: 0.5;
+    opacity: 0.5;
+}*/
+.forum_post {
+    margin-bottom: 2px;
+}
+span.last_read a {
+    background-image: url(https://i.imgur.com/uL5X3iL.png) !important;
+    background-repeat: no-repeat !important;
+    padding-right: 20px !important;
+    margin-left: 10px !important;
+    background-position: 1px 2px !important;
+    background-size: 13px 13px !important;
+	-moz-opacity: 0.5;
+    opacity: 0.5 !important;
+}
+span.last_read a:hover {
+	-moz-opacity: 1;
+    opacity: 1 !important;
+}
+.forum_unread tbody tr:first-child {
+    border-left: 1px solid tomato;
+}
+.forum_post .colhead_dark a[href="#"]:last-child {
+    display: none;
+}
+#forums .scale_image {
+    max-width: 500px !important;
+}
+#forums #newthreadpreview #threadpoll [value="Vote"] {
+    margin-bottom: 10px !important;
+    padding: 4px 10px !important;
+}
+#forums #answer_block input.required {
+    margin-bottom: 5px;
+}
+.box .body strong,
+#profilediv strong{
+    /* For hide tags */
+    padding: 0 !important;
+    margin: 0 !important;
+}
+#forums .colhead_dark [id*="bar"][style="float: right;"] input {
+	/* Edit buttons */
+	margin-left: 5px !important;
+}
+#forums .colhead_dark [id*="bar"][style="float: right;"] {
+	margin-right: 6px;
+}
+#quickreplytext > div[id*="textarea"] {
+	margin: 0 auto;
+}
+/* Inbox */
+#inbox .send_form a {
+    padding: 0;
+}
+#inbox .manage_form tbody tr td[class] {
+    padding-left: -50px;
+    float: right;
+}
+#inbox #quickpost {
+    margin: 20px 0 -10px 30px;
+    width: 90%;
+}
+#inbox [type=search],
+#inbox [class="message_table checkboxes"] {
+    margin-top: 10px;
+}
+label.error[for="quickpost"] {
+    display: none !important;
+}
+#inbox .manage_form[name="messages"] [class="box pad"] {
+	border: 0;	
+}
+#inbox #messageform.send_form #preview {
+	margin: -7px 10px 10px 10px !important;
+}
+#inbox #messageform.send_form [class="box pad"] #quickpost {
+	margin-bottom: 20px !important;
+}
+#inbox #messageform.send_form [class="box pad"] {
+	margin-bottom: 90px !important;	
+}
+#inbox input[placeholder="Search inbox"],
+#inbox input[placeholder="Search sentbox"] {
+	width: 100% !important;
+}
+#inbox [class="box pad"] #messageform.manage_form {
+	margin-top: -30px !important;
+}
+#inbox table[class="message_table checkboxes"] {
+	margin-bottom: -10px !important;
+}
+#inbox .colhead > td:nth-child(2) {
+	width: 45% !important;
+}
+#inbox tr > td:nth-child(3) a[target="_blank"],
+#inbox tr > td:nth-child(3) a[href="rules.php"] {
+	/* Hide donor and banned icons from main view */
+	display: none;
+}
+/* Artists */
+#artist .sidebar .box li {
+	margin-left: 0 !important;
+}
+#artist .header > div.linkbox {
+    text-align: left;
+}
+#artist .box_addartists_similar input[type=submit] {
+    padding: 4px 10px !important;
+    margin: 0;
+}
+#artist .sidebar [class="box box_search"] li {
+    margin: -20px 0 0 0;
+}
+#artist .sidebar [class="box box_search"] li input[type=submit] {
+    padding: 4px 10px !important;
+}
+#flip_view_1 [style*="font-size: 12pt"] {
+	font-size: 10pt !important;
+}
+table tbody .group_torrent > span {
+    font-size: 0;
+}
+table tbody .group_torrent > span a.tooltip > td[colspan] {
+    font-size: 12px !important;
+    margin-right: 3px !important;
+}
+#artist_list li[class] .artists_label {
+	font-size: 12px !important;
+}
+/* Torrents */
+#torrents .collage_table, #vote_matches {
+    margin-top: 10px;
+    width: 100%;
+}
+.votespan, .votespan > * {
+    float: none !important;
+}
+a[dir=ltr] {
+    font-weight: bold;
+}
+a[href*="artist.php?id="],
+a[href*="artist.php?artistname="],
+#artist .header > h2:nth-child(1) {
+    color: tomato !important;
+}
+a[href*="artist.php?id="]:hover, a[href*="artist.php?artistname="] {
+    color: #222;
+}
+[class="box box_artists"] a[href*="artist.php?id="],  [class="box box_artists"] a[href*="artist.php?artistname="]{
+    color: gray !important;
+}
+[class="box box_artists"] a[dir=ltr][href*="artist.php?id="]:hover, [class="box box_artists"] a[href*="artist.php?artistname="]:hover {
+    color: #222 !important;
+}
+.torrent_info:before {
+    content: "[";
+}
+.torrent_info:after {
+    content: "]";
+}
+.group_info span {
+    float: right;
+}
+.torrent_row span {
+    float: right;
+}
+#torrents #torrent_details td span .torrent_row {
+    font-size: 0;
+    margin-right: -10px;
+}
+#torrents #torrent_details .torrent_row td span .tooltip {
+    font-size: 12px !important;
+    padding: 0 !important;
+    margin-right: 3px !important;
+    width: 0 !important;
+}
+#torrent_table {
+    font-size: 11px;
+}
+#torrent_table td {
+    padding: 5px 5px;
+}
+#artist_list li {
+    font-size: 0 !important;
+}
+#artist_list li > span,
+#artist_list li > input,
+#artist_list li > a {
+    font-size: 12px !important;
+}
+#artist_list .tooltip {
+    display: none;
+}
+#artist_list li .tooltip {
+    margin-left: 5px;
+}
+#artist_list li .tooltip:before {
+    content: ' [';
+}
+#artist_list li .tooltip:after {
+    content: ']';
+}
+#artist_list li:hover .tooltip {
+    display: inline;
+}
+#artist_list {
+    padding: 10px;
+}
+#AddArtists select {
+    border: 1px solid #eee;
+    margin-left: 3px;
+    padding: 5px 10px;
+}
+#AddArtists select option {
+    margin-left: 3px;
+}
+#torrents .header > div.linkbox {
+    text-align: left;
+}
+.reportinfo_table, .filelist_table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+#torrents .group,
+#torrents .torrent {
+    background-color: #f8f8f8;
+}
+img[alt="Seeders"],
+img[alt="Leechers"] {
+    background-position: 10px 0 !important;
+}
+img[alt="Snatches"] {
+    background-position: 6px 0 !important;
+}
+#torrents [class="submit ft_submit"] span {
+    display: block;
+    float: none !important;
+    margin-bottom: -15px;
+    margin-top: 5px;
+}
+.filter_torrents #catalogue_number_year > td:nth-child(3).label {
+    display: block;
+    margin-right: -25px;
+    margin-top: 3px;
+}
+.box_addtag input[type=submit] {
+    padding: 4px 10px !important;
+}
+.box_addtag input {
+    margin: -5px 0 5px 0;
+}
+.box_addtag br {
+    display: none;
+}
+.add_bookmark a,
+.remove_bookmark a {
+    font-size: 0 !important;
+    margin-left: 2px;
+    padding: 0 0 16px 16px !important;
+    position: relative;
+    top: 12px;
+    background-image: url(https://i.imgur.com/fvIQ30k.png);
+    background-repeat: no-repeat !important;
+    background-size: 16px 16px;
+    height: 0;
+    padding: 9px;
+    width: 0;
+	-moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.add_bookmark a:hover,
+.remove_bookmark a:hover {
+	-moz-opacity: 1;
+    opacity: 1;
+}
+.remove_bookmark a {
+    background-image: url(https://i.imgur.com/CPUmHA2.png);
+}
+#AddArtists select,
+#AddArtists input {
+    margin-bottom: 5px;
+}
+#AddArtists select {
+    font-size: 10px;
+    padding-bottom: 4px;
+    padding-left: 0;
+    padding-top: 5px;
+    width: 90px;
+}
+#AddArtists input {
+    width: 108px;
+}
+#AddArtists #artist {
+    margin-bottom: 5px;
+}
+[name="artistmanager_box"] {
+    margin-right: 10px;
+}
+.artist_main {
+    margin-bottom: 2px;
+}
+.remove_artist {
+    margin-left: 5px;
+}
+.group_image:hover {
+	-moz-opacity: 0.8;
+    opacity: 0.8;
+}
+.main_column [class="box torrent_description"] {
+    margin-top: 10px !important;
+}
+#torrents .group_info .tooltip[dir="ltr"]  {
+    /* Prevent long titles from breaking torrent page */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+strong.tl_free, strong.tl_snatched {
+    /* Freeleech and snatched links */
+    color: tomato !important;
+}
+table tr td div.cats_audiobooks,
+table tr td div.cats_ebooks,
+table tr td div.cats_applications,
+table tr td div.cats_music,
+table tr td div.cats_elearningvideos,
+table tr td div.cats_comedy,
+table tr td div.cats_comics {
+	height: 16px;
+	width: 16px;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+table tr td div.cats_audiobooks,
+table tr td div.cats_music,
+table tr td div.cats_comedy {
+	background: url('https://i.imgur.com/XWGUz9x.png');
+}
+table tr td div.cats_elearningvideos {
+	background: url('https://i.imgur.com/NmmL4sA.png');
+}
+table tr td div.cats_ebooks,
+table tr td div.cats_comics {
+	background: url('https://i.imgur.com/WrdbEUV.png');
+}
+table tr td div.cats_applications {
+	background: url(https://i.imgur.com/mKIzsIi.png);
+}
+#torrents #torrent_details .torrentdetails .scale_image {
+	display: block;
+	max-width: 470px !important;
+}
+#torrents .sidebar li  {
+	margin-left: 0;
+}
+/* Collages */
+ul.collage_images {
+    width: 530px;
+}
+#collage .collage_table tr[class*="row"] td:nth-child(2) > a[href*="collages.php"] {
+    font-weight: bold;
+}
+.collage_images li a img {
+    height: 107px;
+    width: 107px;
+}
+.collage_images li {
+    width: 100px;
+    margin-right: -14px !important;
+    margin-bottom: -14px !important;
+}
+#collage #coverart {
+	margin-bottom: 30px !important;
+}
+#collage .box_addcomment .pad textarea[rows="5"] {
+	width: 90%;
+}
+/* Top 10 */
+#top10 [class*="torrent row"] td:nth-child(2),
+#top10 [class*="torrent row"] td:nth-child(4),
+#top10 [class*="torrent row"] td:nth-child(5),
+#top10 [class*="torrent row"] td:nth-child(6),
+#top10 [class*="torrent row"] td:nth-child(9),
+#top10 .colhead td:nth-child(2),
+#top10 .colhead td:nth-child(4),
+#top10 .colhead td:nth-child(5),
+#top10 .colhead td:nth-child(6),
+#top10 .colhead td:nth-child(9),
+#top10 .big_info .group_image,
+#top10 [href*="torrents.php?action=download"],
+#top10 [class="add_bookmark float_right"]{
+    display: none !important;
+}
+#top10 .big_info .group_image {
+    display: none;
+}
+#top10 .group_image + .group_info {
+    margin-left: 0;
+}
+#top10 table.torrent_table tr td {
+	padding: 4px 10px !important;	
+}
+/* Log search */
+#log input[value="Search log"] {
+    padding: 4px 10px !important;
+}
+/* Wiki */
+#wiki .sidebar ul > li > ul > li {
+	margin-left: 20px;
+	list-style: square !important;
+}
+.sidebar .add_form[name=aliases] input[type=submit] {
+    margin: 0 !important;
+}
+#wiki [name="aliases"] input[type=submit] {
+    padding: 4px 10px !important;
+}
+#wiki .sidebar .navigation_list {
+	margin-left: -10px !important;
+}
+#wiki .sidebar ul, .navigation_list {
+	padding: 10px 0 !important;
+}
+/* Bookmarks */
+#bookmarks [class="group discog"] {
+    background-color: #f8f8f8;
+}
+#bookmarks .pad ol[style] li {
+    margin-left: 5px;
+}
+/* Requests */
+#requests [class="box box_votes"] {
+    border: 0 !important;
+    border-top: 0;
+}
+#requests[class="request_table"] {
+    margin: 10px;
+}
+#requests_box tr.colhead_dark > td:nth-child(1) {
+    width: 270px !important;
+}
+#requests_box tr td:nth-child(2),
+#requests_box tr td:nth-child(3) {
+    white-space: nowrap;
+}
+#requests tr[id] label[for] {
+    margin-right: 20px;
+}
+#requests tr[id] input[type=checkbox] {
+    margin-bottom: 10px;
+}
+#requests #request_table td,
+#requests #request_table td * {
+	font-size: 11px !important;
+}
+#requests #request_table td.nobr:nth-child(4) {
+	max-width: 15px;
+}
+#requests #request_table td.nobr:nth-child(3) {
+	max-width: 45px;
+}
+#requests #request_table td.nobr:nth-child(7) {
+	max-width: 50px;
+}
+#requests tr.rowb > td > a > strong {
+    white-space: pre-wrap;
+}
+/* Invites */
+#user #content .thin [class="box pad"]:nth-child(6)  {
+    border: 0 !important; /* Invite page */
+}
+.invitetree li {
+    margin-left: 13px;
+}
+.invitetree li li {
+    margin-left: 20px;
+}
+[name=invite] .field_div {
+    margin-left: 0 !important;
+    text-align: left;
+}
+[name=invite] .field_div:nth-child(3) .input input[type=submit] {
+    margin-top: 0;
+    display: inline;
+}
+[name=invite] .field_div .input input[type=submit] {
+    padding: 4px 10px !important;
+}
+/* Profile */
+#user table[id*="collage"],
+table[class="layout recent"] {
+    margin-bottom: 5px;
+}
+#user .recent td img {
+    width: 100px;
+    width: 100px;
+}
+#user .recent tbody td {
+    padding: 4px 0 0 3px !important;
+}
+#userhistory .scale_image {
+	/* Profile forum history */
+    max-width: 500px !important;
+}
+/* Profile edit settings */
+#sortable li {
+    white-space: nowrap;
+}
+#user #userform #acc_irckey_tr li,
+#user #userform  .setting_description li {
+    margin-left: 20px !important;
+}
+#user #userform li {
+    margin-left: 0 !important;
+}
+#disableavatars {
+    margin-bottom: 5px;
+}
+#search_string {
+    display: block;
+    width: 30%;
+}
+#settings_sections h2 {
+    font-size: 12px;
+}
+/* Upload */
+#upload input[size="71"][readonly="readonly"] {
+    margin: 5px !important;
+}
+/* Tooltipster */
+.tooltipster-default {
+    border-radius: 0;
+    border: 2px solid tomato;
+    background-color: tomato;
+    color: #fff !important;
+}
+.tooltipster-default .tooltipster-content {
+    font-family: Open Sans;
+    font-size: 12px;
+    color: #fff !important;
+}
+.tooltipster-default .tooltipster-content a {
+    color: #fff !important;
+}
+.tooltipster-default .tooltipster-content a:hover {
+    color: #222 !important;
+}
+/* All forms of notifications */
+/* Noty (popup alert) */
+#noty_bottomRight_layout_container {
+	-moz-opacity: 0.7;
+    opacity: 0.7;
+}
+#noty_bottomRight_layout_container:hover {
+	-moz-opacity: 1;
+    opacity: 1;
+}
+[id*=noty] * {
+    background-color: #f4f4f4 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-size: 12px !important;
+}
+.noty_message,
+.noty_message span {
+    background-color: #555 !important;
+    color: #fff;
+}
+/* Classic alerts + modbar for staff */
+#alerts {
+	background-color: #555;
+	text-align: center;
+	font-weight: bold;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	z-index: 1000;
+	height: 25px;
+}
+.alertbar {
+	/* Remove | between modbar links */
+	font-size: 0;
+	display: inline-block;
+    padding: 4px 0;
+}
+.alertbar a {
+	/* Works better with modbar */
+    margin-left: 15px;
+}
+.alertbar * {
+	font-size: 12px;
+}
+#alerts:hover {
+	-moz-opacity: 1;
+    opacity: 1;
+}
+.alertbar a {
+    color: #fff !important;
+}
+#wrapper .alertbar a:hover {
+	/* #wrapper because of previous selector interfering */
+	color: #aaa !important;
+}
+/* Lightbox */
+#lightbox {
+    z-index: 1;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    width: 800px;
+    height: 80%;
+    margin-left: -400px;
+    text-align: center;
+}
+#lightbox img {
+    max-width: 800px;
+    max-height: 100%;
+    background-color: #fff;
+}
+#curtain {
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+}
+/* Rippy */
+span.rbt {
+    display: none;
+}
+span.rbm {
+    background: tomato !important;
+    border-radius: 10px 10px 10px 10px;
+    color: #fff;
+    display: block;
+    margin-right: 10px;
+    padding: 10px 5px 10px !important;
+    line-height: 12px;
+    width: 200px;
+    margin-left: -30px;
+}
+span.rbb {
+    background: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid tomato;
+    height: 0;
+    margin-left: 40px;
+    width: 0;
+}
+span.rbm a {
+    color: #fff !important;
+}
+span.rbm a:hover {
+    color: #222 !important;
+}
+#rippywrap #rippy-says:hover:after {
+    content: 'Praise Trico!';
+    display: block;
+    margin-top: 10px;
+}
+
+/* Footer */
+#footer {
+    display: block;
+    margin-top: 70px;
+}
+#footer strong {
+    color: #222;
+}
+#disclaimer_container {
+    text-align: left !important;
+}
+#disclaimer_container:before {
+    content: 'Disclaimer:';
+    font-weight: bold;
+}
+/* Other */
+#reply_box [class="box pad"] {
+    margin-top: 15px;
+}
+#nav_better {
+	display: none !important;
+}
+
+/* Userscripts */
+
+/* Youtube track previewer */
+#videos_table {
+    margin: 10px 0 10px 0;
+}
+/* What.CD Snatched */
+#status_content_area a {
+	color: #ccc !important;
+}
+#status_content_area {
+	background: #555 !important;
+	color: #fff !important;
+	padding: 10px !important;
+}
+#status_content_area * {
+	color: #fff !important;
+}
+/* Buffer generator */
+#userinfo #userinfo_stats:hover li.my_reqBuffer {
+	display: inline !important;
+}
+
+/* Theme */
+input[type=submit],
+input[type=button],
+input[type=submit]:hover,
+input[type=button]:hover,
+li.graph .center_poll,
+span.rbm,
+.tooltipster-default {
+    background-color: tomato !important;
+}
+#userinfo_username:after {
+	color: tomato;
+}
+.autocomplete-suggestions strong,
+strong.tl_free,
+a[href*="artist.php?id="],
+a[href*="artist.php?artistname="],
+#artist .header > h2:nth-child(1) {
+    color:tomato !important;
+}
+.forum_unread tbody tr:first-child {
+    border-left:1px solid tomato !important;
+}.tooltipster-default{
+    border:2px solid tomato !important;
+}
+span.rbb{
+    border-top:10px solid tomato;
+}
+
+/*
+If you want to make a custom theme colour,
+use the code line above and replace all instances
+of "tomato" with your favourite colour.
+ */
+
+
+/* Omnibar testing */
+/*#searchbars {
+	display: block;
+	width: 200px;
+	margin-top: 18px;
+	margin-left: 425px;
+	padding: 3px 10px;
+	background: #eee;
+}
+#searchbars ul {
+	display: none;
+}
+#searchbars:after {
+	content: "Search";
+	color: #aaa;
+}
+#searchbars:hover:after {
+	content: "";
+}
+#searchbars:hover {
+	margin-top: -3px;
+	margin-left: -10px;
+	width: 647px;
+	background: inherit;
+}
+#searchbars:hover ul {
+	display: inline-block;
+}
+*/
